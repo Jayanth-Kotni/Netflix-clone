@@ -1,0 +1,554 @@
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-bar{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 5%;
+    z-index: 10;
+}
+.logo-title{
+    width: 100px;
+    height: 100%;
+}
+.nav-logo {
+    width: 100%;
+    height: 100%;
+}
+.nav-items-conatiner{
+    display: flex;
+    gap: 10px;
+}
+.dropdown{
+    border: 1px solid white;
+    padding: 0.4rem;
+    border-radius: 4px;
+    background: transparent;
+}
+.language-drop-item {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.language-drop-item:focus {
+    outline: none;
+}
+
+.language-drop-item option {
+    background-color: black;
+}
+.signin {
+    background-color: #dc030f;
+    border: 1px solid #dc030f;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+.main-container {
+    width: 100%;
+    height: 80vh;
+}
+
+.net-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shadow-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(to top,
+            rgba(0, 0, 0, 0.8) 0,
+            rgba(0, 0, 0, 0) 60%,
+            rgba(0, 0, 0, 0.8) 100%);
+}
+
+.main-text-container {
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-text {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.sub-text,
+.sub-para {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.sub-para {
+    margin: 0 50px;
+}
+
+.gmail-input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    padding-left: 7px;
+}
+
+.mail-label {
+    color: black;
+    position: absolute;
+    top: 28%;
+    left: 2%;
+    color: rgb(153, 149, 149);
+    transition: 0.5s;
+}
+
+.gmail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.mail-input-container {
+    background-color: white;
+    width: 90%;
+    height: 50px;
+    position: relative;
+}
+
+.gmail-input:focus+.mail-label {
+    top: 0.2rem;
+    font-size: 10px;
+}
+
+.gmail-input:not(:placeholder-shown).gmail-input:not(:focus)+.mail-label {
+    top: 0.2rem;
+    font-size: 10px;
+}
+
+.gmail-input:focus-visible {
+    outline: none;
+}
+
+.main-button {
+    background-color: #dc030f;
+    border: 1px solid #dc030f;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 2px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.tab {
+    border-top: 8px solid #222;
+    padding: 2rem 1rem;
+}
+
+.tab-details {
+    text-align: center;
+}
+
+.tab-head {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.tab-para {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.tab-image-cont {
+    width: 100%;
+    position: relative;
+}
+
+.tab-image-st {
+    width: 100%;
+}
+
+.tab-video-container {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 13%;
+    height: 100%;
+    max-width: 73%;
+    max-height: 54%;
+    z-index: -2;
+}
+
+.tab-video {
+    width: 100%;
+}
+
+.tab-banner-container {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 16em;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    height: 60px;
+    padding: 0.25rem 0.6rem;
+    gap: 15px;
+}
+
+.banner-container {
+    width: 20%;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-details {
+    width: 60%;
+}
+
+.banner-details>h4 {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.banner-details>h6 {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(63, 63, 246);
+}
+
+.downloading-container {
+    width: 20%;
+    height: 100%;
+}
+
+.stciker {
+    width: 100%;
+    height: 100%;
+}
+
+.video-tab-container {
+    max-width: 63%;
+    max-height: 47%;
+    z-index: -2;
+    top: 9%;
+    left: 19%;
+}
+
+.each-question-container {
+    width: 100%;
+}
+
+.question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-size: 18px;
+    background-color: #303030;
+    border: 1px solid #303030;
+    color: white;
+}
+
+.answer {
+    background-color: #303030;
+    border-top: 1px solid black;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.answer>p {
+    margin: 1rem;
+}
+
+.questions-container {
+    border-top: 8px solid #222;
+    padding: 2rem 0;
+}
+
+.question-head {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin: 1rem 3rem;
+}
+
+.questions-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.enter-email-container {
+    text-align: center;
+}
+
+.enter-email-container>h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 2rem 0;
+}
+
+footer {
+    border-top: 8px solid #333;
+    padding: 2rem 1rem;
+    color: #757575;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.service-container-1>h4 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.service-container-3>.dropdown {
+    width: fit-content;
+    border: 1px solid #757575;
+    color: #757575;
+}
+
+.service-container-3>.dropdown>.language-drop-item {
+    color: #757575;
+}
+
+@media screen and (min-width: 768px) {
+    .main-container {
+        height: 100vh;
+    }
+
+    .shadow-overlay {
+        height: 100vh;
+    }
+
+    .main-text-container {
+        top: 40%;
+        left: 30%;
+        transform: translate(-20%, -20%);
+    }
+
+    .main-text {
+        font-size: 3rem;
+    }
+
+    .sub-text,
+    .sub-para {
+        font-size: 1.3rem;
+    }
+
+    .tab {
+        padding: 4rem;
+    }
+
+    .tab-head {
+        font-size: 35px;
+    }
+
+    .tab-para {
+        font-size: 20px;
+    }
+
+    .tab-banner-container {
+        max-width: 26em;
+        height: 85px;
+    }
+
+    .banner-container {
+        width: 15%;
+    }
+
+    .downloading-container {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .banner-details>h4 {
+        font-size: 18px;
+    }
+
+    .banner-details>h6 {
+        font-size: 14px;
+    }
+
+    .question {
+        font-size: 20px;
+    }
+
+    .question-head {
+        font-size: 38px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+    .questions-list {
+        padding: 1rem 5rem;
+    }
+
+    .enter-email-container {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(15%);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-bar {
+        padding: 2% 5%;
+    }
+
+    .logo-title {
+        width: 150px;
+    }
+
+    .signin {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .dropdown {
+        padding: 10px 5px;
+    }
+
+    .nav-items-conatiner {
+        gap: 30px;
+    }
+
+    .main-text-container {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .mail-input-container {
+        width: 50%;
+    }
+
+    .gmail-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 1px;
+    }
+
+    .main-button {
+        height: 50px;
+    }
+
+    .tab {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .tab-details {
+        text-align: left;
+        padding: 0 6rem;
+    }
+
+    .tab-head {
+        font-size: 50px;
+    }
+
+    .tab-para {
+        font-size: 25px;
+    }
+
+    .tab-image-cont {
+        max-width: 500px;
+    }
+
+    .tab:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .tab-banner-container {
+        max-width: 20em;
+        height: 100px;
+        padding: 1rem;
+    }
+
+    .banner-container {
+        width: 20%;
+    }
+
+    .questions-list {
+        padding: 1rem 25rem;
+    }
+
+    .enter-email-container {
+        transform: translateX(16%);
+    }
+
+    footer {
+        padding: 2rem 20rem;
+        justify-content: flex-start;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .service-container-2 {
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+
+    .service-container-1,
+    .service-container-3,
+    .service-container-4 {
+        align-self: flex-start;
+    }
+}
+.footer-list-container{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:flex-start;
+    text-decoration: underline;
+    margin-right: 12px;
+}
